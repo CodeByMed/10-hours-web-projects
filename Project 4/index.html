@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1>Get in Touch</h1>
+        <p>Fill out the form below to contact us</p>
+
+        <form>
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Name" required />
+            </div>
+
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" required />
+            </div>
+
+            <div class="input-field">
+              <i class="fas fa-phone"></i>
+              <input type="tel" placeholder="Phone (optional)" />
+            </div>
+
+            <div class="input-field">
+              <i class="fas fa-tag"></i>
+              <input type="text" placeholder="Subject" required />
+            </div>
+          </div>
+
+          <div class="message-field">
+            <i class="fas fa-message"></i>
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+
+          <button type="submit">
+            <div class="btn-content">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </div>
+          </button>
+        </form>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Main Street, City, Country</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <span>contact@example.com</span>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <span>+1 234 567 8900</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
