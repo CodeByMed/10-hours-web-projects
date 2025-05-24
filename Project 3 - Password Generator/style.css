@@ -1,1 +1,249 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 /* Styling Rules for -- Password Generator App -- */
+
+:root {
+  --primary-color: #2b5876;
+  --secondary-color: #4e4376;
+  --weak-color: #fc8191;
+  --strong-color: #68d391;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "sans-serif";
+}
+
+body {
+    display: flex;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #333;
+    font-family: sans-serif;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 450px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+.password-container {
+  margin-bottom: 2rem;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 0;
+}
+
+#password {
+  width: 100%;
+  padding: 1.1rem;
+  padding-right: 50px;
+  border: none;
+  background: transparent;
+  color: #4a5568;
+  letter-spacing: 1px;
+  outline: none;
+  border-radius: 10px; 
+}
+
+#copy-btn {
+  cursor: pointer;
+  color: #718096;
+  font-size: 1.1rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#copy-btn:hover {
+  color: var(--primary-color);
+}
+
+.options {
+  margin-bottom: 2rem;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.option:last-child {
+  margin-bottom: 0;
+}
+
+.option label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
+}
+
+input[type="range"] {
+  accent-color: var(--primary-color);
+  height: 5px;
+  cursor: pointer;
+  flex: 1;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  appearance: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "\2714";
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+
+#length-value {
+  font-weight: 600;
+  color: var(--primary-color);
+  width: 30px;
+  text-align: center;
+  background: #e2e8f0;
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(43, 88, 118, 0.2);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.strength-container {
+  margin-top: 0.8rem;
+}
+
+.strength-container p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+#strength-label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.strength-meter {
+  height: 10px;
+  background-color: #edf2f7;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0;
+  min-width: 5%;
+  background-color: var(--weak-color);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1.8rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .option label {
+    font-size: 0.9rem;
+  }
+}
