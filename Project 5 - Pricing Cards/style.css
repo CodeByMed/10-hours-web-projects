@@ -1,1 +1,350 @@
 /* Styling Rules for -- Pricing Cards App -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* CSS variables */
+:root {
+  --primary-color: #4ade80;
+  --primary-dark: #22c55e;
+  --primary-light: #86efac;
+  --bg-dark: #1a1a1a;
+  --text-light: #f3f4f6;
+  --text-gray: #9ca3af;
+  --card-bg: #252525;
+  --card-hover: #2e2e2e;
+  --border-radius: 12px;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text; /* For  SAFARI*/
+  color: transparent;
+}
+
+header p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--card-hover);
+}
+
+.card-header {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(74, 222, 128, 0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.plan-icon i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  margin-bottom: 15px;
+}
+
+.currency {
+  font-size: 1.5rem;
+  margin-right: 2px;
+  color: var(--primary-color);
+  vertical-align: top;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--text-gray);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+}
+
+.card-body {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.features li i {
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.features li i.fa-check {
+  color: var(--primary-color);
+}
+
+.features li i.fa-times {
+  color: #ef4444;
+}
+
+.features li.disabled {
+  opacity: 0.7;
+  color: var(--text-gray);
+}
+
+.card-footer {
+  padding: 20px 30px 30px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(74, 222, 128, 0.1);
+}
+
+.btn-accent {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #000;
+}
+
+.btn-accent:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.popular {
+  transform: scale(1.05);
+  border: 2px solid var(--primary-color);
+  z-index: 2;
+}
+
+.popular:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--primary-color);
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+.testimonial {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote {
+  max-width: 700px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.quote i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.quote p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 15px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  border: 2px solid var(--primary-color);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.info p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  header {
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    min-width: 400px;
+    margin: 0 auto 40px;
+  }
+
+  .card,
+  .popular {
+    transform: none;
+  }
+  .card:hover,
+  .popular:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial {
+    margin-top: 40px;
+  }
+
+  .quote {
+    padding: 30px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.btn-accent {
+  animation: pulse 2s infinite;
+}
