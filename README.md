@@ -23,7 +23,7 @@ Willkommen zu meiner Sammlung von 6 Projekten, die dir die besten Starter-Prakti
 
 1. Repository klonen:
     ```bash
-    git clone https://github.com/dein-benutzername/web-projects-6.git
+    git clone https://github.com/CodeByMed/10-hours-web-projects.git
     ```
 2. Öffne den Ordner in deinem Code-Editor.
 3. Starte die Projekte lokal im Browser.
